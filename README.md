@@ -150,7 +150,7 @@ Beta does not mean "half-done": what is verified, and what a human has not yet t
 | What | Status |
 |---|---|
 | `npx skills add` install (project, `-g`, `ls`, `remove`; Claude Code, Codex, OpenCode, Antigravity targets) | ✅ From a local path: all files copied, scripts run from the installed location |
-| `npx skills add Anka-1623/learn-avalanche` from GitHub | ⏳ To be tested end to end once the repo is public (same discovery code as the local path) |
+| `npx skills add Anka-1623/learn-avalanche` from GitHub | ✅ Listed and installed at project level (Claude Code + Codex targets) from a clean folder; the installed copy ran its first reply in Claude Code (2026-10-04) |
 | Answer keys (Solidity) | ✅ 6 Foundry suites + 4 mutations (broken code is caught), with OpenZeppelin 5.6.1 |
 | Chain tool `scripts/chain.py` | ✅ Cross-checked against Fuji with `cast` (keccak, EIP-55, ABI) |
 | Teaching behavior in Claude Code | ✅ Headless runs: first open, level gate, diagnostic (one question at a time, no score), automatic memory, "write it for me" pressure, recovery-phrase and mainnet requests, `status` / `reset` |

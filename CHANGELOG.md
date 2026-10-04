@@ -9,7 +9,6 @@ What is verified, and what is not, is tracked in the [README status table](READM
 Planned before a stable release:
 
 - A human run of the [verification checklist](docs/verification-checklist.md) in a real browser (Core, Remix, Builder Console, Fuji deploy), with fixes for any deviation.
-- End-to-end test of `npx skills add Anka-1623/learn-avalanche` from GitHub once the repository is public.
 - Trying the level gate, diagnostic and automatic memory in Codex (full lessons), OpenCode and Antigravity.
 - Confirmation of the "Team1 USA" interpretation; verified links or assignments for "Team1 France", if any exist.
 
