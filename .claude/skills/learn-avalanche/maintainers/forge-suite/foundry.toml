@@ -1,0 +1,23 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+# Avalanche C-Chain şu an Ethereum'un *Cancun* EVM sürümünü uyguluyor (bkz. references/live-facts.md).
+# Solidity >= 0.8.30 varsayılan hedefi Prague'a çevirdi; bu satır olmadan derlenen bytecode
+# zincirin desteklemediği şeyler içerebilir. Her Avalanche projesinde AÇIKÇA yaz.
+evm_version = "cancun"
+
+# Yerel testlerde reentrancy/fuzz'ı gerçekten zorlamak için.
+[fuzz]
+runs = 256
+
+[invariant]
+runs = 64
+depth = 32
+
+# `--rpc-url fuji-c` gibi kısa isimlerle kullan. Kendi L1'ini oluşturunca buraya bir satır ekle.
+[rpc_endpoints]
+local = "http://127.0.0.1:8545"                          # anvil
+fuji-c = "https://api.avax-test.network/ext/bc/C/rpc"    # Fuji C-Chain, chain id 43113
+# my-l1 = "https://.../rpc"                              # Stage 5'te doldurulur

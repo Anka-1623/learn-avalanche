@@ -1,0 +1,17 @@
+# The learner's local progress file and working folder (personal; never committed)
+.learn-avalanche/
+avalanche-lab/
+*.bak-*
+
+# Python / editor / OS
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets safety net: this repo must never contain keys or passwords
+.env
+.env.*
+*.keystore
+*.pem

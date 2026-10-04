@@ -1,0 +1,41 @@
+name: Bug report
+description: The skill said or did something wrong (wrote your code, stated a wrong fact, broke its memory file, ...).
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. **Never paste a recovery phrase, private key or password.** If the skill asked you for one, do not open a public issue: use the private security report link on the issue chooser instead.
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which agent?
+      options: [Claude Code, Codex, OpenCode, Antigravity, Other]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      description: "Written at the top of `SKILL.md` (e.g. 0.2.0-beta)."
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What went wrong?
+      description: Paste the relevant part of the conversation (not the whole session). Include the exact text of any error.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How can we reproduce it?
+      description: The command you typed, your starting level, and whether a memory file already existed.

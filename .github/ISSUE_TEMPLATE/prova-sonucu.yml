@@ -1,0 +1,48 @@
+name: Test result
+description: You tried the skill; write what you expected and what happened.
+title: "[test] "
+labels: ["test-result"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. **Never write or share a recovery phrase, private key or password.** Make sure nothing but your wallet address is visible in screenshots.
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which agent?
+      options: [Claude Code, Codex, OpenCode, Antigravity, Other]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      description: "Written at the top of `SKILL.md` (e.g. 0.2.0-beta)."
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Which step?
+      options: [Onboarding / level diagnostic, Memory (memory.md), "Stage 0: Setup", "Stage 1: Solidity basics", "Stage 1.5: Early Fuji deploy", "Stage 2: Contract design", "Stage 3: Security", "Stage 4: Deploy to Fuji", "Stage 5: Your own L1", Install (npx), Other]
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: If a UI label was different, write its exact text. If there was an error, paste the message.
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Your starting level
+      options: [I've never coded, I know JS/Python, I had started Solidity, I write contracts]
